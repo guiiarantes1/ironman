@@ -1,0 +1,102 @@
+.body {
+    margin-top: 15px;
+    background-color: rgb(223, 223, 223);
+    opacity: 0.8;
+    border-radius: 15px;
+    padding: 15px;
+    display: block;
+    height: 75%;
+}
+
+.titulo-questionario>h2 {
+    text-align: center;
+    font-size: 35px;
+    padding: 20px;
+}
+
+.questionario {
+    width: 70%;
+    display: inline-block;
+  
+}
+
+.pergunta>p {
+    font-size: 22px;
+}
+
+.respostas {
+    font-size: 20px;
+    margin-top: 60px;
+    margin-left: 30px;
+}
+
+.respostas>input {
+    margin-top: 25px;
+}
+
+.correcao {
+    display: inline-block;
+    width: 30%;
+  
+}
+.correcao>h3{
+    margin-top: 15px;
+    color: #AA0505;
+    text-align: center;
+    font-size: 27px;
+    font-weight: 500;
+    height: 40px;
+    background-color: #FBCA03;
+    width: 150px;
+    border-radius: 10px;
+    border-style:solid;
+    border-width: 2px;
+    border-color: black;
+    margin-left: 55px;
+    
+}
+
+.correcao>button{
+    font-size: 25px;
+    text-align: center;
+    background-color: #FBCA03;
+    color: #AA0505;
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    margin-left: 55px;
+}
+
+.campo-correcao {    
+
+    display: grid;
+    grid-template-columns: 80px 80px;
+    grid-template-rows: 80px 80px;
+   
+}
+
+.campo-correcao>#r1,
+#r2,
+#r3,
+#r4,
+#r5,
+#r6,
+#r7,
+#r8,
+#r9,
+#r10 {
+    border-width: 2px;
+    border-style:solid;
+    border-color: black;
+    border-radius: 10px;
+    color: #FBCA03;
+    font-size: 25px;
+    text-align: center;
+    background-color: #AA0505;
+    display: flexbox;
+    height: 60px;
+    width: 70px;
+    padding: 20px;
+    margin-left: 55px;
+    justify-items: stretch;
+}

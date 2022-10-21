@@ -1,0 +1,28 @@
+.titulo>h1 {
+    background: linear-gradient(to right, #AA0505 49%, #FBCA03 0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 11px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 65px;
+    
+
+}
+
+.navbar-collapse{
+   margin-left: 1500px;
+    
+}
+a {
+    color: #AA0505;
+    font-size: 19px;
+    font-weight: 500;
+    
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #e4b809;
+    font-weight: 500;
+}

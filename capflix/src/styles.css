@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    padding: 10px;
+    background-image: url(https://my4kwallpapers.com/wp-content/uploads/2021/02/Iron-Man-4k-Wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
