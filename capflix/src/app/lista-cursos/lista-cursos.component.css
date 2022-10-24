@@ -1,0 +1,33 @@
+
+img {
+  width: 150px;
+  border-radius: 10px;
+}
+
+.lista-cursos {
+  padding: 5px;
+  display: block;
+  height: 30vh;
+  border-radius: 15px;
+  opacity: 1;
+  background-color: rgb(201, 201, 201);
+
+
+}
+.lista-cursos>h4{
+  margin-left: 5vh;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: none;
+  font-size: 20px;
+}
+.lista-cursos > ul {
+
+  list-style-type: none;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 180px 200px 200px 200px 200px 200px 200px 200px 200px;
+
+
+}
