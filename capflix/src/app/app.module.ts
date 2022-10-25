@@ -13,7 +13,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { LoginComponent } from './login/login.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { ListaCursosComponent } from './lista-cursos/lista-cursos.component';
-import { CursosComponent } from './cursos/cursos.component';
+
+
+
 
 
 
@@ -26,7 +28,9 @@ import { CursosComponent } from './cursos/cursos.component';
     LoginComponent,
     CatalogoComponent,
     ListaCursosComponent,
-    CursosComponent
+
+
+  
   ],
   imports: [
     BrowserModule,

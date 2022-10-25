@@ -6,11 +6,13 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
 
 
 
+
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
   { path: 'catalogo', component: CatalogoComponent },
   { path: 'questionario', component: QuestionarioComponent },
+
 
 ];
 @NgModule({
