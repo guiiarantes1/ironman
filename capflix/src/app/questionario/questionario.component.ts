@@ -26,6 +26,7 @@ export class QuestionarioComponent implements OnInit {
 
   }
 
+
   onAnswer(option: boolean, valor: string) {
     this.answerSelected = true;
     this.valorSelecionado = valor;
@@ -33,22 +34,37 @@ export class QuestionarioComponent implements OnInit {
     setTimeout(() => {
       this.currentQuiz++;
       this.answerSelected = false;
-  
-   
-
 
     }, 200);
 
     if (option) {
       this.correctAnswers++;
-      
+
     } else {
       this.incorrectAnswers++
-    
- 
+
     }
 
 
+
+  }
+
+  proxQuest() {
+
+    setTimeout(() => {      
+      return this.currentQuiz++
+
+    }, 100);
+
+  }
+
+
+  antQuest() {
+
+    setTimeout(() => {
+      return this.currentQuiz--
+
+    }, 100);
 
   }
 
