@@ -7,14 +7,13 @@
     <div class="questionario">
         <form>
             <div class="pergunta">
-                <p>{{quizzes[currentQuiz].question}}<br><br>
-                </p>                
+                <p>{{quizzes[currentQuiz].question}}<br><br></p>                
             </div>
             <ul class="list-group" *ngFor="let quiz of quizzes[currentQuiz].answer">
                 <label>
-                    <li class="li-group-item">
-                        <input type="radio" name="options" (change)="onAnswer(quiz.correct)" [disabled]="answerSelected">
-                        {{quiz.option}}
+                    <li class="li-group-item">                       
+                        <input type="radio" name="options" (change)="onAnswer(quiz.correct, quiz.valor)" [disabled]="answerSelected">
+                        {{quiz.option}} 
                     </li>
                 </label>
             </ul>
@@ -25,16 +24,16 @@
     <div class="correcao">
         <h3>Respostas</h3>
         <div class="campo-correcao">
-            <p id="r1">1</p>
-            <p id="r2">2</p>
-            <p id="r3">3</p>
-            <p id="r4">4</p>
-            <p id="r5">5</p>
-            <p id="r6">6</p>
-            <p id="r7">7</p>
-            <p id="r8">8</p>
-            <p id="r9">9</p>
-            <p id="r10">10</p>
+            <p id="r1" >1{{valorSelecionado}}</p>
+            <p id="r2">2{{valorSelecionado}}</p>
+            <p id="r3">3{{valorSelecionado}}</p>
+            <p id="r4">4{{valorSelecionado}}</p>
+            <p id="r5">5{{valorSelecionado}}</p>
+            <p id="r6">6{{valorSelecionado}}</p>
+            <p id="r7">7{{valorSelecionado}}</p>
+            <p id="r8">8{{valorSelecionado}}</p>
+            <p id="r9">9{{valorSelecionado}}</p>
+            <p id="r10">10{{valorSelecionado}}</p>
         </div>
         <button type="input" value="enviar">Finalizar</button>
     </div>
