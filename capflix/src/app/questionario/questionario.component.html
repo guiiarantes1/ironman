@@ -7,37 +7,40 @@
     <div class="questionario">
         <form>
             <div class="pergunta">
-                <p>{{quizzes[currentQuiz].question}}<br><br></p>                
+                <p>{{quizzes[currentQuiz].question}}<br><br></p>
             </div>
             <ul class="list-group" *ngFor="let quiz of quizzes[currentQuiz].answer">
                 <label>
-                    <li class="li-group-item">                       
+                    <li class="li-group-item">
                         <input type="radio" name="options" (change)="onAnswer(quiz.correct, quiz.valor)" [disabled]="answerSelected">
-                        {{quiz.option}} 
+                        {{quiz.option}}
                     </li>
+
                 </label>
             </ul>
 
             Questões corretas: {{correctAnswers}}. | Questões Incorretas: {{incorrectAnswers}}
 
-            <br><button type="button" class="btn btn-danger" (click)="antQuest()">Anterior</button> 
-            <button type="button" class="btn btn-danger" (click)="proxQuest()">Próxima</button>
+
+            <br><button type="button" class="btn btn-danger" (click)="antQuest()">Anterior</button>
+            <button type="button" class="btn btn-danger"   (click)="proxQuest(opcao, valorSelecionado)">Próxima</button>
+
         </form>
     </div>
     <div class="correcao">
         <h3>Respostas</h3>
         <div class="campo-correcao">
-            <p id="r1" >1{{valorSelecionado}}</p>
-            <p id="r2">2{{valorSelecionado}}</p>
-            <p id="r3">3{{valorSelecionado}}</p>
-            <p id="r4">4{{valorSelecionado}}</p>
-            <p id="r5">5{{valorSelecionado}}</p>
-            <p id="r6">6{{valorSelecionado}}</p>
-            <p id="r7">7{{valorSelecionado}}</p>
-            <p id="r8">8{{valorSelecionado}}</p>
-            <p id="r9">9{{valorSelecionado}}</p>
-            <p id="r10">10{{valorSelecionado}}</p>
+            <p id="r1" >1{{valoresSelecionados[0]}}</p>
+            <p id="r2">2{{valoresSelecionados[1]}}</p>
+            <p id="r3">3{{valoresSelecionados[2]}}</p>
+            <p id="r4">4{{valoresSelecionados[3]}}</p>
+            <p id="r5">5{{valoresSelecionados[4]}}</p>
+            <p id="r6">6{{valoresSelecionados[5]}}</p>
+            <p id="r7">7{{valoresSelecionados[6]}}</p>
+            <p id="r8">8{{valoresSelecionados[7]}}</p>
+            <p id="r9">9{{valoresSelecionados[8]}}</p>
+            <p id="r10">10{{valoresSelecionados[9]}}</p>
         </div>
-        <button type="input" value="enviar">Finalizar</button>
+        <button type="input" (click)="finalizar()">Finalizar</button>
     </div>
 </div>
