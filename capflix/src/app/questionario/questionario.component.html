@@ -23,7 +23,7 @@
 
 
             <br><button type="button" class="btn btn-danger" *ngIf="valoresSelecionados.length >= 1" (click)="antQuest()">Anterior</button>
-            <button type="button" class="btn btn-danger"   (click)="proxQuest(opcao, valorSelecionado)">Próxima</button>
+            <button type="button" class="btn btn-danger" *ngIf="valoresSelecionados.length < quizzes.length-1"  (click)="proxQuest(opcao, valorSelecionado)">Próxima</button>
 
         </form>
     </div>
@@ -41,6 +41,6 @@
             <p id="r9">9{{valoresSelecionados[8]}}</p>
             <p id="r10">10{{valoresSelecionados[9]}}</p>
         </div>
-        <button type="input" (click)="finalizar()">Finalizar</button>
+        <button type="input" (click)="finalizar(opcao)">Finalizar</button>
     </div>
 </div>

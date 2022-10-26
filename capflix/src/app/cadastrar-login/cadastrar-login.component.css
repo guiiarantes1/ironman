@@ -1,0 +1,28 @@
+.home{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login{
+    background-color: rgba(255, 255, 255, 0.897);
+    border-radius: 15px;
+    width: 450px;
+    padding: 40px;
+  }
+  .login > button{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .esqueceu{
+    text-align: right;
+  }
+  .cadastrar{
+    text-align: right;
+  }
+  

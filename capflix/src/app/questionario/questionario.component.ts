@@ -15,10 +15,10 @@ export class QuestionarioComponent implements OnInit {
   correctAnswers = 0;
   incorrectAnswers = 0;
   valorSelecionado = '';
-  valoresSelecionados:any=[];
+  valoresSelecionados: any = [];
   opcao!: any;
-  respostaSelecionada!:boolean;
-  respostasSelecionadas:any= [];
+  respostaSelecionada!: boolean;
+  respostasSelecionadas: any = [];
 
 
 
@@ -34,15 +34,7 @@ export class QuestionarioComponent implements OnInit {
     this.answerSelected = true;
     this.valorSelecionado = valor;
     this.opcao = option;
-
-
-    setTimeout(() => {
-
-      this.answerSelected = false;
-
-    }, 200);
-
-
+    this.answerSelected = false;
   }
 
   proxQuest(option: boolean, valor: string) {
@@ -58,13 +50,7 @@ export class QuestionarioComponent implements OnInit {
       return this.currentQuiz++
 
     }, 100);
-    if (option) {
-      this.correctAnswers++;
 
-    } else {
-      this.incorrectAnswers++
-
-    }
 
   }
 
@@ -84,9 +70,14 @@ export class QuestionarioComponent implements OnInit {
 
   }
 
-  finalizar(){
+ finalizar(option:boolean) {
+  this.respostaSelecionada = option;
+  this.respostasSelecionadas.push(this.respostaSelecionada); 
+  this.correctAnswers = this.respostasSelecionadas.filter((x: boolean):boolean => x).length;
+  this.incorrectAnswers = this.respostasSelecionadas - this.correctAnswers;
+  console.log(this.respostasSelecionadas);
 
-  }
+ }
 
 }
 

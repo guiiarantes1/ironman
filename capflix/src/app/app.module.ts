@@ -13,6 +13,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { LoginComponent } from './login/login.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { ListaCursosComponent } from './lista-cursos/lista-cursos.component';
+import { CadastrarLoginComponent } from './cadastrar-login/cadastrar-login.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -28,8 +30,9 @@ import { ListaCursosComponent } from './lista-cursos/lista-cursos.component';
     LoginComponent,
     CatalogoComponent,
     ListaCursosComponent,
+    CadastrarLoginComponent,
 
-
+    
   
   ],
   imports: [
@@ -38,10 +41,11 @@ import { ListaCursosComponent } from './lista-cursos/lista-cursos.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [
-    RouterModule
+    RouterModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
