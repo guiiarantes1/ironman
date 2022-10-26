@@ -15,6 +15,7 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
 import { ListaCursosComponent } from './lista-cursos/lista-cursos.component';
 import { CadastrarLoginComponent } from './cadastrar-login/cadastrar-login.component';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -42,10 +43,11 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     MatIconModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
-    RouterModule,FormsModule
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

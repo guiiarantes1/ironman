@@ -1,38 +1,32 @@
 <div class="home">
   <div class="login">
-    <form>
+    <form class="conteudo-form" [formGroup]="loginForm" (submit)="submitLogin()">
       <div class="email">
-        <label for="exampleInputEmail1">Usuário ou E-mail</label>
-        <input
-          type="email"
-          class="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
-          placeholder="Enter email"
-        />
-      </div>
+        <label for="inputEmail">Usuário ou E-mail</label>
+        <input type="email" class="form-control" 
+        placeholder="Digite seu email" formControlName="email"/>
+      </div>    
+
       <div class="senha">
         <label for="exampleInputPassword1">Senha</label>
-        <input
-          type="password"
-          class="form-control"
-          id="exampleInputPassword1"
-          placeholder="Password"
-        />
+        <input type="password" class="form-control"
+        placeholder="Senha" formControlName="senha"/>
       </div>
+
       <div class="form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-        <label class="form-check-label" for="exampleCheck1"
-          >Lembrar Dados.</label
-        >
+        <label class="form-check-label" for="exampleCheck1">Lembrar Dados.</label>
       </div>
+
       <div class="esqueceu">
         <p><a href="">Esqueceu a senha?</a></p>
       </div>
+
       <div class="cadastrar">
         <p><a routerLink="cadastrar-login">Cadastre-se</a></p>
       </div>
-      <button type="submit" class="btn btn-primary" routerLink="/catalogo">
+
+      <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">
         Entrar
       </button>
     </form>
