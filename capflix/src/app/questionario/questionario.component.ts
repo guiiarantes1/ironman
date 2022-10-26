@@ -17,6 +17,8 @@ export class QuestionarioComponent implements OnInit {
   valorSelecionado = '';
   valoresSelecionados:any=[];
   opcao!: any;
+  respostaSelecionada!:boolean;
+  respostasSelecionadas:any= [];
 
 
 
@@ -45,8 +47,10 @@ export class QuestionarioComponent implements OnInit {
 
   proxQuest(option: boolean, valor: string) {
 
-
+    this.respostaSelecionada = option;
+    this.respostasSelecionadas.push(this.respostaSelecionada);
     this.valoresSelecionados.push(this.valorSelecionado);
+    console.log(this.respostasSelecionadas)
     setTimeout(() => {
 
 
@@ -73,7 +77,8 @@ export class QuestionarioComponent implements OnInit {
 
     }, 100);
 
-
+    this.respostasSelecionadas.pop(this.respostaSelecionada);
+    this.respostasSelecionadas.concat(this.respostaSelecionada);
     this.valoresSelecionados.pop(this.valorSelecionado);
     this.valoresSelecionados.concat(this.valorSelecionado);
 

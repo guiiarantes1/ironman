@@ -22,7 +22,7 @@
             Questões corretas: {{correctAnswers}}. | Questões Incorretas: {{incorrectAnswers}}
 
 
-            <br><button type="button" class="btn btn-danger" (click)="antQuest()">Anterior</button>
+            <br><button type="button" class="btn btn-danger" *ngIf="valoresSelecionados.length >= 1" (click)="antQuest()">Anterior</button>
             <button type="button" class="btn btn-danger"   (click)="proxQuest(opcao, valorSelecionado)">Próxima</button>
 
         </form>
