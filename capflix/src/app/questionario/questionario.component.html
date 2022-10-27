@@ -6,15 +6,15 @@
 
     <div class="questionario">
         <form class="form">
-            <div class="pergunta">
+            <div class="pergunta" >
                 <p>{{quizzes[currentQuiz].question}}<br><br></p>
             </div>
-            <ul class="list-group" *ngFor="let quiz of quizzes[currentQuiz].answer">
+            <ul class="list-group" *ngFor="let quiz of quizzes[currentQuiz].answer; index as index">
                 <label>
                     <li class="li-group-item">
                         <input type="radio" name="options" (change)="onAnswer(quiz.correct, quiz.valor)" [disabled]="answerSelected">
-                        {{quiz.option}}
-                    </li>
+                       {{index+1}} {{quiz.option}}
+                    </li>   
 
                 </label>
             </ul>
@@ -29,7 +29,7 @@
     </div>
     <div class="correcao">
         <h3>Respostas</h3>
-        <div class="campo-correcao">
+        <div class="campo-correcao" >
             <p id="r1" >1{{valoresSelecionados[0]}}</p>
             <p id="r2">2{{valoresSelecionados[1]}}</p>
             <p id="r3">3{{valoresSelecionados[2]}}</p>

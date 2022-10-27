@@ -26,6 +26,10 @@ export class QuestionarioComponent implements OnInit {
 
   ngOnInit(): void {
     this.quizzes = this.quizService.getQuizzes();
+    this.quizzes.sort(() => Math.random() - 0.5);
+    this.quizzes.forEach((quiz:Quiz)=>{
+      quiz.answer.sort(() => Math.random() - 0.5);
+    });
 
   }
 
@@ -35,6 +39,7 @@ export class QuestionarioComponent implements OnInit {
     this.valorSelecionado = valor;
     this.opcao = option;
     this.answerSelected = false;
+    console.log(this.respostasSelecionadas)
   }
 
   proxQuest(option: boolean, valor: string) {
@@ -44,8 +49,6 @@ export class QuestionarioComponent implements OnInit {
     this.valoresSelecionados.push(this.valorSelecionado);
     console.log(this.respostasSelecionadas)
     setTimeout(() => {
-
-
 
       return this.currentQuiz++
 

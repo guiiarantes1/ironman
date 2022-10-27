@@ -18,16 +18,21 @@
 
 .pergunta>p {
     font-size: 22px;
+    margin-left: 25px;
 }
 
 .form{
     display: inline;
 }
+.form > button{
+    margin-left: 30px;
+}
 
 .list-group {
     font-size: 20px;
     margin-top: 15px;
-    margin-left: 30px;
+    margin-left: 40px;
+    list-style: none;
 }
 
 .li-group-item>input {
@@ -61,6 +66,16 @@
     font-size: 25px;
     text-align: center;
     background-color: #FBCA03;
+    color: #AA0505;
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    margin-left: 55px;
+}
+.correcao>button:hover{
+    font-size: 25px;
+    text-align: center;
+    background-color: #e9ba00;
     color: #AA0505;
     border-radius: 10px;
     width: 150px;
