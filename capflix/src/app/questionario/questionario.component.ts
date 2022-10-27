@@ -73,8 +73,14 @@ export class QuestionarioComponent implements OnInit {
  finalizar(option:boolean) {
   this.respostaSelecionada = option;
   this.respostasSelecionadas.push(this.respostaSelecionada); 
+ 
+
+ while (this.respostasSelecionadas.length < this.quizzes.length){
+    this.respostasSelecionadas.push(false);
+    console.log(this.respostasSelecionadas)
+  } ;
   this.correctAnswers = this.respostasSelecionadas.filter((x: boolean):boolean => x).length;
-  this.incorrectAnswers = this.respostasSelecionadas - this.correctAnswers;
+  this.incorrectAnswers = this.respostasSelecionadas.length - this.correctAnswers;
   console.log(this.respostasSelecionadas);
 
  }
