@@ -1,42 +1,36 @@
 <div class="home">
-    <div class="login">
-      <form class="conteudo-form" [formGroup]="cadastroForm" (submit)="cadastrarLogin()"> 
-        <div class="email">
-          <label for="InputEmail1">Insira seu email</label>
-          <input
-            type="email"
-            class="form-control"
-            placeholder="Enter email"  
-          />
-        </div>
-        <div class="senha">
-          <label for="InputPassword1">Digite uma senha</label>
-          <input
-            type="password"
-            class="form-control"
-            placeholder="Password"         
-          />
-        </div>
-        <div class="senha">
-          <label for="InputPassword2">Confirme sua senha</label>
-          <input
-            type="password"
-            class="form-control"
-            placeholder="Password"/>
-          
-        </div>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="checkDados" />
-          <label class="form-check-label" for="exampleCheck1"
-            >Lembrar Dados.</label>
-        </div>
-        <div>
-          <p id="errSenha" *ngIf="!erro">Login ou senha inválidos.</p>
-        </div>
-        <button type="submit" class="btn btn-primary" >
-          Cadastrar
+
+  <div class="login">
+    <form class="conteudo-form" [formGroup]="cadastroForm" (submit)="cadastrarLogin()">
+      <div class="email">
+        <label for="InputEmail1">Insira seu email</label>
+        <input type="email" class="form-control" placeholder="email@email.com" />
+      </div>
+      <div class="senha">
+        <label for="InputPassword1">Digite uma senha</label>
+        <input type="password" class="form-control" placeholder="Senha" />
+      </div>
+      <div class="senha">
+        <label for="InputPassword2">Confirme sua senha</label>
+        <input type="password" class="form-control" placeholder="Confirme sua senha" />
+
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="checkDados" />
+        <label class="form-check-label" for="exampleCheck1">Lembrar Dados.</label>
+      </div>
+      <div>
+        <p id="errSenha" *ngIf="!erro">Login ou senha inválidos.</p>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!cadastroForm.valid">
+        Cadastrar
+      </button>
+      <button class="btn btn-secondary btn-sm" id="voltar" routerLink="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
+        </svg> Voltar
         </button>
-      </form>
-    </div>
+    </form>
+    
   </div>
-  
+</div>

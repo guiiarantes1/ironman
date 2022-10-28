@@ -19,6 +19,7 @@ export class QuestionarioComponent implements OnInit {
   opcao!: any;
   respostaSelecionada!: boolean;
   respostasSelecionadas: any = [];
+  mostrarResultado = false;
 
 
 
@@ -77,6 +78,8 @@ export class QuestionarioComponent implements OnInit {
  finalizar(option:boolean) {
   this.respostaSelecionada = option;
   this.respostasSelecionadas.push(this.respostaSelecionada); 
+  this.mostrarResultado = true;
+
  
 
  while (this.respostasSelecionadas.length < this.quizzes.length){

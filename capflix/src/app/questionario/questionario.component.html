@@ -2,6 +2,7 @@
     <div class="titulo-questionario">
         <h2>QUESTIONÁRIO</h2>
         <p class="text-center">Questão {{currentQuiz+1}} de {{quizzes.length}}</p>
+        <p class="text-center" *ngIf="mostrarResultado">Questões corretas: {{correctAnswers}}. | Questões Incorretas: {{incorrectAnswers}}</p>
     </div>
 
     <div class="questionario">
@@ -19,7 +20,7 @@
                 </label>
             </ul>
             <br><br>
-            Questões corretas: {{correctAnswers}}. | Questões Incorretas: {{incorrectAnswers}}
+           
 
 
             <br><button type="button" class="btn btn-danger"  *ngIf="valoresSelecionados.length >= 1" (click)="antQuest()">Anterior</button>
