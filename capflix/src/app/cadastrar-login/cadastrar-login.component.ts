@@ -12,6 +12,7 @@ import { cadastrarLoginModel } from '../models/cadastrarLoginModel';
 export class CadastrarLoginComponent implements OnInit {
 
   cadastroForm!: FormGroup;
+  erro:boolean = true;
 
   constructor(private formBuilder: FormBuilder, private router:Router) { }
 
@@ -28,7 +29,7 @@ export class CadastrarLoginComponent implements OnInit {
   async cadastrarLogin(){
     var dadosCadastro = this.cadastroForm.getRawValue() as cadastrarLoginModel;
     if (dadosCadastro.senha != dadosCadastro.confirmaSenha){
-      alert("Senhas não coincidem!")
+      this.erro = false;
     }else{
       var body = {email:dadosCadastro.email, senha: dadosCadastro.senha};
       var response = await fetch('http://localhost:3000/login', {method:"POST", headers:{'Content-Type': 'application/json'} , body:JSON.stringify(body)})
