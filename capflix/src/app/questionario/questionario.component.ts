@@ -30,6 +30,7 @@ export class QuestionarioComponent implements OnInit {
     this.quizzes.forEach((quiz:Quiz)=>{
       quiz.answer.sort(() => Math.random() - 0.5);
     });
+    console.log(this.quizzes)
 
   }
 
@@ -60,16 +61,16 @@ export class QuestionarioComponent implements OnInit {
 
   antQuest() {
 
+    this.respostasSelecionadas.pop(this.respostaSelecionada);
+    this.respostasSelecionadas.concat(this.respostaSelecionada);
+    this.valoresSelecionados.pop(this.valorSelecionado);
+    this.valoresSelecionados.concat(this.valorSelecionado);
+
     setTimeout(() => {
 
       return this.currentQuiz--
 
     }, 100);
-
-    this.respostasSelecionadas.pop(this.respostaSelecionada);
-    this.respostasSelecionadas.concat(this.respostaSelecionada);
-    this.valoresSelecionados.pop(this.valorSelecionado);
-    this.valoresSelecionados.concat(this.valorSelecionado);
 
   }
 
@@ -87,6 +88,14 @@ export class QuestionarioComponent implements OnInit {
   console.log(this.respostasSelecionadas);
  
  }
+
+ navegarGabarito(){
+
+
+ }
+
+ 
+
 
 }
 

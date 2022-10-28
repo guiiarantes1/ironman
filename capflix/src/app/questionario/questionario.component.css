@@ -116,3 +116,123 @@
     margin-left: 55px;
     justify-items: stretch;
 }
+
+.body {
+    margin-top: 15px;
+    background-color: rgba(255, 255, 255, 0.897);
+    border-radius: 15px;  
+    height: 75%;
+}
+
+.titulo-questionario>h2 {
+    text-align: center;
+    font-size: 35px;
+    padding: 20px;
+}
+
+.questionario {
+    width: 70%;
+    display: inline-block;
+  }
+
+.pergunta>p {
+    font-size: 22px;
+    margin-left: 25px;
+}
+
+.form{
+    display: inline;
+}
+.form > button{
+    margin-left: 30px;
+}
+
+.list-group {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-left: 40px;
+    list-style: none;
+}
+
+.li-group-item>input {
+    margin-top: 15px;
+}
+
+.correcao {
+
+    display: inline-block;
+    width: 30%;
+}
+.correcao>h3{
+    margin-top: 15px;
+    color: #AA0505;
+    text-align: center;
+    font-size: 27px;
+    font-weight: 500;
+    height: 40px;
+    background-color: #FBCA03;
+    width: 150px;
+    border-radius: 10px;
+    border-style:solid;
+    border-width: 2px;
+    border-color: black;
+    margin-left: 55px;
+
+}
+
+.correcao>button{
+    font-size: 25px;
+    text-align: center;
+    background-color: #FBCA03;
+    color: #AA0505;
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    margin-left: 55px;
+}
+.correcao>button:hover{
+    font-size: 25px;
+    text-align: center;
+    background-color: #e9ba00;
+    color: #AA0505;
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    margin-left: 55px;
+}
+
+.campo-correcao {
+
+    display: grid;
+    grid-template-columns: 80px 80px;
+    grid-template-rows: 80px 80px;
+
+}
+
+.campo-correcao>#r1,
+#r2,
+#r3,
+#r4,
+#r5,
+#r6,
+#r7,
+#r8,
+#r9,
+#r10:hover {
+    cursor: pointer;
+    border-width: 2px;
+    border-style:solid;
+    border-color: black;
+    border-radius: 10px;
+    color: #FBCA03;
+    font-size: 25px;
+    text-align: center;
+    background-color: #AA0505;
+    display: flexbox;
+    height: 60px;
+    width: 70px;
+    padding: 20px;
+    margin-left: 55px;
+    justify-items: stretch;
+}
+

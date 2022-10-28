@@ -9,6 +9,16 @@
       "email": "guilherme@capgemini.com",
       "senha": "ironman",
       "id": 2
+    },
+    {
+      "email": "teste@teste.com",
+      "senha": "senha123",
+      "id": 3
+    },
+    {
+      "email": "teste@teste1.com",
+      "senha": "teste",
+      "id": 4
     }
   ]
 }

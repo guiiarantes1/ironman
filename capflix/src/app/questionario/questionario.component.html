@@ -7,13 +7,13 @@
     <div class="questionario">
         <form class="form">
             <div class="pergunta" >
-                <p>{{quizzes[currentQuiz].question}}<br><br></p>
+                <p>{{currentQuiz+1}} - {{quizzes[currentQuiz].question}}<br><br></p>
             </div>
-            <ul class="list-group" *ngFor="let quiz of quizzes[currentQuiz].answer; index as index">
+            <ul class="list-group" *ngFor="let quiz of quizzes[currentQuiz].answer;">
                 <label>
                     <li class="li-group-item">
                         <input type="radio" name="options" (change)="onAnswer(quiz.correct, quiz.valor)" [disabled]="answerSelected">
-                       {{index+1}} {{quiz.option}}
+                    {{quiz.option}}
                     </li>   
 
                 </label>
@@ -22,24 +22,24 @@
             Questões corretas: {{correctAnswers}}. | Questões Incorretas: {{incorrectAnswers}}
 
 
-            <br><button type="button" class="btn btn-danger" *ngIf="valoresSelecionados.length >= 1" (click)="antQuest()">Anterior</button>
+            <br><button type="button" class="btn btn-danger"  *ngIf="valoresSelecionados.length >= 1" (click)="antQuest()">Anterior</button>
             <button type="button" class="btn btn-danger" *ngIf="valoresSelecionados.length < quizzes.length-1"  (click)="proxQuest(opcao, valorSelecionado)">Próxima</button>
 
         </form>
     </div>
     <div class="correcao">
         <h3>Respostas</h3>
-        <div class="campo-correcao" >
-            <p id="r1" >1{{valoresSelecionados[0]}}</p>
-            <p id="r2">2{{valoresSelecionados[1]}}</p>
-            <p id="r3">3{{valoresSelecionados[2]}}</p>
-            <p id="r4">4{{valoresSelecionados[3]}}</p>
-            <p id="r5">5{{valoresSelecionados[4]}}</p>
-            <p id="r6">6{{valoresSelecionados[5]}}</p>
-            <p id="r7">7{{valoresSelecionados[6]}}</p>
-            <p id="r8">8{{valoresSelecionados[7]}}</p>
-            <p id="r9">9{{valoresSelecionados[8]}}</p>
-            <p id="r10">10{{valoresSelecionados[9]}}</p>
+        <div class="campo-correcao" > 
+            <p id="r1"(click)="navegarGabarito()">1{{valoresSelecionados[0]}}</p>
+            <p id="r2"(click)="navegarGabarito()">2{{valoresSelecionados[1]}}</p>
+            <p id="r3"(click)="navegarGabarito()">3{{valoresSelecionados[2]}}</p>
+            <p id="r4"(click)="navegarGabarito()">4{{valoresSelecionados[3]}}</p>
+            <p id="r5"(click)="navegarGabarito()">5{{valoresSelecionados[4]}}</p>
+            <p id="r6"(click)="navegarGabarito()">6{{valoresSelecionados[5]}}</p>
+            <p id="r7"(click)="navegarGabarito()">7{{valoresSelecionados[6]}}</p>
+            <p id="r8"(click)="navegarGabarito()">8{{valoresSelecionados[7]}}</p>
+            <p id="r9"(click)="navegarGabarito()">9{{valoresSelecionados[8]}}</p>
+            <p id="r10"(click)="navegarGabarito()">10{{valoresSelecionados[9]}}</p>
         </div>
         <button type="input" (click)="finalizar(opcao)">Finalizar</button>
     </div>

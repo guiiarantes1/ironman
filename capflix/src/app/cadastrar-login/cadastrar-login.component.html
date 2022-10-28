@@ -1,14 +1,13 @@
 <div class="home">
     <div class="login">
-      <form>
+      <form class="conteudo-form" [formGroup]="cadastroForm" (submit)="cadastrarLogin()"> 
         <div class="email">
           <label for="exampleInputEmail1">Insira seu email</label>
           <input
             type="email"
             class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
             placeholder="Enter email"
+            formControlName="email"
           />
         </div>
         <div class="senha">
@@ -16,17 +15,17 @@
           <input
             type="password"
             class="form-control"
-            id="exampleInputPassword1"
             placeholder="Password"
+            formControlName="senha"
           />
         </div>
         <div class="senha">
-          <label for="exampleInputPassword1">Confirme sua senha</label>
+          <label for="exampleInputPassword2">Confirme sua senha</label>
           <input
             type="password"
             class="form-control"
-            id="exampleInputPassword1"
             placeholder="Password"
+            formControlName="confirmaSenha"
           />
         </div>
         <div class="form-check">
@@ -35,13 +34,7 @@
             >Lembrar Dados.</label
           >
         </div>
-        <div class="esqueceu">
-          <p><a href="">Esqueceu a senha?</a></p>
-        </div>
-        <div class="cadastrar">
-          <p><a href="">Cadastre-se</a></p>
-        </div>
-        <button type="submit" class="btn btn-primary" routerLink="/catalogo">
+        <button type="submit" class="btn btn-primary" >
           Cadastrar
         </button>
       </form>

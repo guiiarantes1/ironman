@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {  FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { loginModel } from '../models/loginModels';
 
 
@@ -24,11 +24,16 @@ export class LoginComponent implements OnInit {
     )
   }
 
-  submitLogin(){
-
+  async submitLogin(){
     var dadosLogin = this.loginForm.getRawValue() as loginModel;
-    console.log(dadosLogin.email)
-    console.log(dadosLogin.senha)
+    var response = await fetch( `http://localhost:3000/login?email=${dadosLogin.email}&senha=${dadosLogin.senha}`)
+    var body = await response.json();
+
+    if (body.length == 0){
+      alert("usuário invalido")
+    }else {
+      this.router.navigate(['/catalogo'])
+    }
   }
 
 }
