@@ -12,6 +12,7 @@ import { loginModel } from '../models/loginModels';
 export class LoginComponent implements OnInit {
 
   loginForm!: FormGroup;
+  erro:boolean = true;
 
   constructor(private formBuilder: FormBuilder, private router:Router) { }
 
@@ -30,10 +31,13 @@ export class LoginComponent implements OnInit {
     var body = await response.json();
 
     if (body.length == 0){
-      alert("usuário invalido")
+      this.erro = false;
     }else {
       this.router.navigate(['/catalogo'])
     }
+    console.log(this.erro);
   }
+
+
 
 }

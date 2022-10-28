@@ -25,9 +25,11 @@
 .cadastrar{
   text-align: right;
 }
-
-.mensagem-erro{
-  font-size: 14px;
+#errSenha {
+  font-size: 13px;
+  margin-top: 3px;
   color: red;
-  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 5px;
+
 }
+

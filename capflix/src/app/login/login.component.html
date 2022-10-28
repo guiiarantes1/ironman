@@ -10,14 +10,16 @@
       <div class="senha">
         <label for="exampleInputPassword1">Senha</label>
         <input type="password" class="form-control"
-        placeholder="Senha" formControlName="senha"/>
+        placeholder="Senha" formControlName="senha"/>     
       </div>
 
       <div class="form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1" />
         <label class="form-check-label" for="exampleCheck1">Lembrar Dados.</label>
       </div>
-
+      <div class="erroMsg">
+        <p id="errSenha" *ngIf="!erro">Login ou senha inválidos.</p>
+      </div>
       <div class="esqueceu">
         <p><a href="">Esqueceu a senha?</a></p>
       </div>
